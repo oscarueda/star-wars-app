@@ -29,4 +29,8 @@ export class StarWarsService {
   getPersonaje(id: number) {
     return this.httpClient.get(`${environment.api}/people/${id}`);
   }
+
+  getPlaneta(id: number) {
+    return this.httpClient.get(`${environment.api}/planets/${id}`);
+  }
 }

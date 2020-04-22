@@ -1,1 +1,13 @@
-<p>planeta works!</p>
+<app-main-container *ngIf="planeta">
+    <app-titulo-principal>{{planeta.name}}</app-titulo-principal>
+    <app-container>
+      <div class="col-4 py-4">
+        <app-imagen-card imagen="../../../assets/imagenes/1.jpg"></app-imagen-card>
+        <ul class="lista mt-4">
+          <li class="item">Clima: {{planeta.climate}}</li>
+          <li class="item">Terreno: {{planeta.terrain}}</li>
+        </ul>
+      </div>
+    </app-container>
+  </app-main-container>
+  

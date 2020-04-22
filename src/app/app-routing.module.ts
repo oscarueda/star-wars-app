@@ -25,7 +25,7 @@ const routes: Routes = [
     component: PlanetasComponent
   },
   {
-    path: 'planeta',
+    path: 'planeta/:id', 
     component: PlanetaComponent
   },
 ];
