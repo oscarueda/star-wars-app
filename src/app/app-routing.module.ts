@@ -4,6 +4,7 @@ import { PersonajesComponent } from './components/personajes/personajes.componen
 import { InicioComponent } from './components/inicio/inicio.component';
 import { PersonajeComponent } from './components/personaje/personaje.component';
 import { PlanetasComponent } from './components/planetas/planetas.component';
+import { PlanetaComponent } from './components/planeta/planeta.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'planetas',
     component: PlanetasComponent
+  },
+  {
+    path: 'planeta',
+    component: PlanetaComponent
   },
 ];
 
