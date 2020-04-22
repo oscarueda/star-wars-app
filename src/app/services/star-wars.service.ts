@@ -26,11 +26,23 @@ export class StarWarsService {
     );
   }
 
+  getVehiculos() {
+    return this.httpClient.get(`${environment.api}/vehicles`).pipe(
+      map((response: any) => {                
+        return response.results;
+      })
+    );
+  }
+
   getPersonaje(id: number) {
     return this.httpClient.get(`${environment.api}/people/${id}`);
   }
 
   getPlaneta(id: number) {
     return this.httpClient.get(`${environment.api}/planets/${id}`);
+  }
+
+  getVehiculo(id: number) {
+    return this.httpClient.get(`${environment.api}/vehicles/${id}`);
   }
 }

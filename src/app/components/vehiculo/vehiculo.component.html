@@ -1,0 +1,17 @@
+
+<app-main-container *ngIf="vehiculo">
+    <app-titulo-principal>{{vehiculo.name}}</app-titulo-principal>
+    <app-container>
+      <div class="col-4 py-4">
+        <app-imagen-card imagen="../../../assets/imagenes/1.jpg"></app-imagen-card>
+        <ul class="lista mt-4">
+          <li class="item">Clima: {{vehiculo.climate}}</li>
+          <li class="item">Terreno: {{vehiculo.terrain}}</li>
+        </ul>
+      </div>
+    </app-container>
+  </app-main-container>
+  
+<app-main-container *ngIf="!vehiculo">
+    <app-titulo-principal>404</app-titulo-principal>
+  </app-main-container>

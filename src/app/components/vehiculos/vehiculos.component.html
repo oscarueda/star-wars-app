@@ -1,0 +1,9 @@
+<app-main-container>
+<app-titulo-principal>VEHÍCULOS</app-titulo-principal>
+<app-container>
+    <div class="col-4 my-3" *ngFor="let vehiculo of vehiculos; index as i">
+    <app-imagen-card imagen="../../../assets/imagenes/1.jpg" [titulo]="vehiculo.name" [link]="'/vehiculo/'+(i+1)"></app-imagen-card>
+    </div>
+</app-container>
+</app-main-container>
+  

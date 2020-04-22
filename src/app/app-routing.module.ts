@@ -5,6 +5,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { PersonajeComponent } from './components/personaje/personaje.component';
 import { PlanetasComponent } from './components/planetas/planetas.component';
 import { PlanetaComponent } from './components/planeta/planeta.component';
+import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
+import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 
 
 const routes: Routes = [
@@ -27,6 +29,14 @@ const routes: Routes = [
   {
     path: 'planeta/:id', 
     component: PlanetaComponent
+  },
+  {
+    path: 'vehiculos',
+    component: VehiculosComponent
+  },
+  {
+    path: 'vehiculo/:id', 
+    component: VehiculoComponent
   },
 ];
 

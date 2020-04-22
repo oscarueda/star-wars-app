@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonajeComponent } from './components/personaje/personaje.component';
 import { PlanetasComponent } from './components/planetas/planetas.component';
 import { PlanetaComponent } from './components/planeta/planeta.component';
+import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
+import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { PlanetaComponent } from './components/planeta/planeta.component';
     ContainerComponent,
     PersonajeComponent,
     PlanetasComponent,
-    PlanetaComponent
+    PlanetaComponent,
+    VehiculosComponent,
+    VehiculoComponent
   ],
   imports: [
     BrowserModule,
