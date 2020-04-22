@@ -1,0 +1,12 @@
+.imagen-card { width: 230px; }
+.card-link {
+  color: #fff;
+  bottom: 35px;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+.card-link:hover {
+  color: #fff;
+  cursor: pointer;
+}

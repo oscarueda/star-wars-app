@@ -1,0 +1,18 @@
+<app-main-container *ngIf="personaje">
+  <app-titulo-principal>{{personaje.name}}</app-titulo-principal>
+  <app-container>
+    <div class="col-4 py-4">
+      <app-imagen-card imagen="../../../assets/imagenes/1.jpg"></app-imagen-card>
+      <ul class="lista mt-4">
+        <li class="item">Año de nacimiento: {{personaje.birth_year}}</li>
+        <li class="item">Color de Ojos: {{personaje.eye_color}}</li>
+        <li class="item">Películas: </li>
+        <li class="item">Genero: {{personaje.gender}}</li>
+        <li class="item">Color de Cabello: {{personaje.hair_color}}</li>
+        <li class="item">Estatura: {{personaje.height}}</li>
+        <li class="item">Peso: {{personaje.mass}}</li>
+        <li class="item">Color de Piel: {{personaje.skin_color}}</li>
+      </ul>
+    </div>
+  </app-container>
+</app-main-container>

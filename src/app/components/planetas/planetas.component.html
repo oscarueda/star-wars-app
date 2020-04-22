@@ -1,0 +1,8 @@
+<app-main-container>
+  <app-titulo-principal>PLANETAS</app-titulo-principal>
+  <app-container>
+    <div class="col-4 my-3" *ngFor="let planeta of planetas; index as i">
+      <app-imagen-card imagen="../../../assets/imagenes/1.jpg" [titulo]="planeta.name" [link]="'/planeta/'+(i+1)"></app-imagen-card>
+    </div>
+  </app-container>
+</app-main-container>
