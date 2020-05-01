@@ -1,0 +1,15 @@
+<app-main-container>
+    <app-titulo-principal>PELíCULAS</app-titulo-principal>
+    <app-container>
+      <div class="col-4 my-3" *ngFor="let pelicula of peliculas; index as i">
+        
+      
+      <!--<div *ngFor="let pelicula of peliculas">
+          <h3>{{ pelicula.title }}</h3>
+          <h4>{{ pelicula.episode_id }}</h4>
+          <p>{{ pelicula.director }}</p>
+        </div>-->
+          <app-imagen-card imagen="../../../assets/imagenes/1.jpg" [titulo]="pelicula.name" [link]="'/pelicula/'+ getId(pelicula.url)"></app-imagen-card></div>
+      
+    </app-container>
+  </app-main-container>

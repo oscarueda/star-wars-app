@@ -34,6 +34,10 @@ export class StarWarsService {
     );
   }
 
+  getPeliculas() {
+    return this.httpClient.get(`${environment.api}/films`);
+  }
+
   getPersonaje(id: number) {
     return this.httpClient.get(`${environment.api}/people/${id}`);
   }

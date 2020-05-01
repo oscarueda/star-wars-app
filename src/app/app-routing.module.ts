@@ -7,6 +7,7 @@ import { PlanetasComponent } from './components/planetas/planetas.component';
 import { PlanetaComponent } from './components/planeta/planeta.component';
 import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
 import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
+import { PeliculasComponent } from './components/peliculas/peliculas.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'vehiculo/:id', 
     component: VehiculoComponent
+  },
+  {
+    path: 'peliculas',
+    component: PeliculasComponent
   },
 ];
 

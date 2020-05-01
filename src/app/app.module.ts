@@ -16,6 +16,7 @@ import { PlanetasComponent } from './components/planetas/planetas.component';
 import { PlanetaComponent } from './components/planeta/planeta.component';
 import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
 import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
+import { PeliculasComponent } from './components/peliculas/peliculas.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
     PlanetasComponent,
     PlanetaComponent,
     VehiculosComponent,
-    VehiculoComponent
+    VehiculoComponent,
+    PeliculasComponent
   ],
   imports: [
     BrowserModule,
