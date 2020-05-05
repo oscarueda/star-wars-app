@@ -7,35 +7,25 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class StarWarsService {
+  [x: string]: any;
 
   constructor(private httpClient: HttpClient) { }
 
-  getPersonajes() {
-    return this.httpClient.get(`${environment.api}/people`).pipe(
-      map((response: any) => {
-        return response.results;
-      })
-    );
+  getPersonajes(url) {
+    return this.httpClient.get(url);
   }
 
-  getPlanetas() {
-    return this.httpClient.get(`${environment.api}/planets`).pipe(
-      map((response: any) => {
-        return response.results;
-      })
-    );
+
+  getPlanetas(url) {
+    return this.httpClient.get(url);
   }
 
-  getVehiculos() {
-    return this.httpClient.get(`${environment.api}/vehicles`).pipe(
-      map((response: any) => {                
-        return response.results;
-      })
-    );
+  getVehiculos(url) {
+    return this.httpClient.get(url);
   }
 
-  getPeliculas() {
-    return this.httpClient.get(`${environment.api}/films`);
+  getPeliculas(url) {
+    return this.httpClient.get(url);
   }
 
   getPersonaje(id: number) {
@@ -48,5 +38,9 @@ export class StarWarsService {
 
   getVehiculo(id: number) {
     return this.httpClient.get(`${environment.api}/vehicles/${id}`);
+  }
+
+  getPelicula(id: number) {
+    return this.httpClient.get(`${environment.api}/films/${id}`);
   }
 }

@@ -1,0 +1,17 @@
+<app-main-container *ngIf="pelicula">
+    <app-titulo-principal>{{pelicula.name}}</app-titulo-principal>
+    <app-container>
+      <div class="col-4 py-4">
+        <app-imagen-card imagen="../../../assets/imagenes/1.jpg"></app-imagen-card>
+        <ul class="lista mt-4">
+          <li class="item">Titulo Pelicula: {{pelicula.title}}</li>
+          <li class="item">Episodio: {{pelicula.episode_id}}</li>
+          <li class="item">Reseña: {{pelicula.opening_crawl}}</li>
+          <li class="item">Director: {{pelicula.director}}</li>
+          <li class="item">Productor: {{pelicula.producer}}</li>
+          <li class="item">Fecha de Lanzamiento: {{pelicula.release_date}}</li>
+        </ul>
+      </div>
+    </app-container>
+  </app-main-container>
+  

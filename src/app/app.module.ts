@@ -17,6 +17,9 @@ import { PlanetaComponent } from './components/planeta/planeta.component';
 import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
 import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
+import { PeliculaComponent } from './components/pelicula/pelicula.component';
+import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +36,12 @@ import { PeliculasComponent } from './components/peliculas/peliculas.component';
     PlanetaComponent,
     VehiculosComponent,
     VehiculoComponent,
-    PeliculasComponent
+    PeliculasComponent,
+    PeliculaComponent,
+    FooterComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule

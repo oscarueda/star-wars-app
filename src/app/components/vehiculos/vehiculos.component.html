@@ -1,9 +1,17 @@
 <app-main-container>
 <app-titulo-principal>VEHÍCULOS</app-titulo-principal>
-<app-container>
-    <div class="col-4 my-3" *ngFor="let vehiculo of vehiculos; index as i">
-    <app-imagen-card imagen="../../../assets/imagenes/1.jpg" [titulo]="vehiculo.name" [link]="'/vehiculo/'+(i+1)"></app-imagen-card>
-    </div>
-</app-container>
+    <app-container>
+        <div class="col-12">
+            <input type="text" [(ngModel)]="search">
+            <button (click)="buscar()">Buscar</button>
+        </div>
+        <div class="col-4 my-3" *ngFor="let vehiculo of vehiculos; index as i">
+        <app-imagen-card imagen="../../../assets/imagenes/1.jpg" [titulo]="vehiculo.name" [link]="'/vehiculo/'+(i+1)"></app-imagen-card>
+        </div>
+        <div class="col-12">
+            <button class="boton" [disabled]="previous === null" (click)="cargarVehiculos(previous)">Anterior</button>
+            <button class="boton" [disabled]="next === null" (click)="cargarVehiculos(next)">Siguiente</button>
+        </div>
+    </app-container>
 </app-main-container>
   

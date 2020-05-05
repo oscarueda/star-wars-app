@@ -1,15 +1,19 @@
 <app-main-container>
-    <app-titulo-principal>PELíCULAS</app-titulo-principal>
-    <app-container>
+  <app-titulo-principal>PELíCULAS</app-titulo-principal>
+    
+  <app-container>
+      <div class="col-12">
+        <input type="text" [(ngModel)]="search">
+        <button (click)="buscar()">Buscar</button>
+      </div>
       <div class="col-4 my-3" *ngFor="let pelicula of peliculas; index as i">
         
-      
-      <!--<div *ngFor="let pelicula of peliculas">
-          <h3>{{ pelicula.title }}</h3>
-          <h4>{{ pelicula.episode_id }}</h4>
-          <p>{{ pelicula.director }}</p>
-        </div>-->
-          <app-imagen-card imagen="../../../assets/imagenes/1.jpg" [titulo]="pelicula.name" [link]="'/pelicula/'+ getId(pelicula.url)"></app-imagen-card></div>
+        <app-imagen-card imagen="../../../assets/imagenes/1.jpg" [titulo]="pelicula.title" [link]="'/pelicula/'+ getId(pelicula.url)"></app-imagen-card>
+      </div>
+      <div class="col-12">
+        <button class="boton" [disabled]="previous === null" (click)="cargarPeliculas(previous)">Anterior</button>
+        <button class="boton" [disabled]="next === null" (click)="cargarPeliculas(next)">Siguiente</button>
+      </div>
       
     </app-container>
-  </app-main-container>
+</app-main-container>

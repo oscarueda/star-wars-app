@@ -1,1 +1,4 @@
-.content { background-color: #000; }
+.content { 
+    background-color: #000;  
+    padding-bottom: 30px;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StarWarsService } from 'src/app/services/star-wars.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-planetas',
@@ -9,15 +10,30 @@ import { StarWarsService } from 'src/app/services/star-wars.service';
 export class PlanetasComponent implements OnInit {
 
   planetas: any;
+  next:string;
+  previous:string;
+  search: string;
 
   constructor(private starWarsService: StarWarsService) { }
 
   ngOnInit(): void {
-    this.starWarsService.getPlanetas().subscribe(planetas => {
-      console.log('planetas', planetas);
+    this.cargarPlanetas(`${environment.api}/planets`);
+  }
 
-      this.planetas = planetas;
-    });
+  cargarPlanetas(url){
+    console.log(url);
+     this.starWarsService.getPlanetas(url).subscribe((planetas:any) => {
+      console.log(planetas);
+     this.next = planetas.next;
+     this.previous = planetas.previous;
+     this.planetas = planetas.results;
+   });
+   
+   }
+
+   buscar(){
+
+    this.cargarPlanetas(`${environment.api}/planets/?search=${this.search}`);
   }
 
 }

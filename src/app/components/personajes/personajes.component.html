@@ -1,8 +1,17 @@
 <app-main-container>
   <app-titulo-principal>PERSONAJES</app-titulo-principal>
   <app-container>
+    <div class="col-12">
+      <input type="text" [(ngModel)]="search">
+      <button (click)="buscar()">Buscar</button>
+    </div>
     <div class="col-4 my-3" *ngFor="let personaje of personajes; index as i">
       <app-imagen-card imagen="../../../assets/imagenes/1.jpg" [titulo]="personaje.name" [link]="'/personaje/'+(i+1)"></app-imagen-card>
     </div>
+  <div class="col-12">
+    <button class="boton" [disabled]="previous === null" (click)="cargarPersonajes(previous)">Anterior</button>
+    <button class="boton" [disabled]="next === null" (click)="cargarPersonajes(next)">Siguiente</button>
+  </div>
+  
   </app-container>
 </app-main-container>
