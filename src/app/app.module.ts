@@ -22,6 +22,8 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { NaveComponent } from './components/nave/nave.component';
 import { NavesComponent } from './components/naves/naves.component';
+import { SpeciesComponent } from './components/species/species.component';
+import { SpecieComponent } from './components/specie/specie.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { NavesComponent } from './components/naves/naves.component';
     PeliculaComponent,
     FooterComponent,
     NaveComponent,
-    NavesComponent
+    NavesComponent,
+    SpeciesComponent,
+    SpecieComponent
   ],
   imports: [
     FormsModule,

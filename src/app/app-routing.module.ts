@@ -11,6 +11,8 @@ import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { NavesComponent } from './components/naves/naves.component';
 import { NaveComponent } from './components/nave/nave.component';
+import { SpeciesComponent } from './components/species/species.component';
+import { SpecieComponent } from './components/specie/specie.component';
 
 
 const routes: Routes = [
@@ -57,6 +59,14 @@ const routes: Routes = [
   {
     path: 'nave/:id', 
     component: NaveComponent
+  },
+  {
+    path: 'species',
+    component: SpeciesComponent
+  },
+  {
+    path: 'specie/:id', 
+    component: SpecieComponent
   },
 ];
 

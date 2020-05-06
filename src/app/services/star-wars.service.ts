@@ -51,4 +51,9 @@ export class StarWarsService {
   getNave(id: number) {
     return this.httpClient.get(`${environment.api}/starships/${id}`);
   }
+  
+  getSpecie(id: number) {
+    return this.httpClient.get(`${environment.api}/species/${id}`);
+  }
+
 }
