@@ -28,6 +28,10 @@ export class StarWarsService {
     return this.httpClient.get(url);
   }
 
+  getApiData(url) {
+    return this.httpClient.get(url);
+  }
+
   getPersonaje(id: number) {
     return this.httpClient.get(`${environment.api}/people/${id}`);
   }
@@ -42,5 +46,9 @@ export class StarWarsService {
 
   getPelicula(id: number) {
     return this.httpClient.get(`${environment.api}/films/${id}`);
+  }
+
+  getNave(id: number) {
+    return this.httpClient.get(`${environment.api}/starships/${id}`);
   }
 }

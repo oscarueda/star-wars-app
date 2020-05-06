@@ -1,0 +1,17 @@
+<app-main-container *ngIf="nave">
+    <app-titulo-principal>{{nave.name}}</app-titulo-principal>
+    <app-container>
+      <div class="col-4 py-4">
+        <app-imagen-card imagen="../../../assets/imagenes/1.jpg"></app-imagen-card>
+        <ul class="lista mt-4">
+          <li class="item">Titulo nave: {{nave.title}}</li>
+          <li class="item">Episodio: {{nave.episode_id}}</li>
+          <li class="item">Reseña: {{nave.opening_crawl}}</li>
+          <li class="item">Director: {{nave.director}}</li>
+          <li class="item">Productor: {{nave.producer}}</li>
+          <li class="item">Fecha de Lanzamiento: {{nave.release_date}}</li>
+        </ul>
+      </div>
+    </app-container>
+  </app-main-container>
+  

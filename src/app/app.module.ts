@@ -20,6 +20,8 @@ import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { NaveComponent } from './components/nave/nave.component';
+import { NavesComponent } from './components/naves/naves.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { FooterComponent } from './components/footer/footer.component';
     VehiculoComponent,
     PeliculasComponent,
     PeliculaComponent,
-    FooterComponent
+    FooterComponent,
+    NaveComponent,
+    NavesComponent
   ],
   imports: [
     FormsModule,
